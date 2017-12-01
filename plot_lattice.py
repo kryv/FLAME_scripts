@@ -52,8 +52,8 @@ class BasedOn:
                       'quadrupole': {'flag':True, 'color':'blue',   'scale':0.0},
                       'sextupole':  {'flag':True, 'color':'purple', 'scale':0.0},
                       'sbend':      {'flag':True, 'color':'green',  'scale':0.0},
-                      'equad':      {'flag':True, 'color':'lime',   'scale':0.0},
-                      'edipole':    {'flag':True, 'color':'blue',   'scale':0.0},
+                      'equad':      {'flag':True, 'color':'navy',   'scale':0.0},
+                      'edipole':    {'flag':True, 'color':'lime',   'scale':0.0},
                       'bpm':        {'flag':True, 'color':'red',    'scale':0.0},
                       'orbtrim':    {'flag':True, 'color':'black',  'scale':0.0},
                       'stripper':   {'flag':True, 'color':'y',      'scale':0.0},
@@ -120,7 +120,7 @@ class BasedOn:
 
         pos = self._starting_offset
 
-        self.axes.add_patch(ptc.Rectangle((-1,-0.02),1e5,0.04,edgecolor='none',facecolor='gray'))
+        self.axes.add_line(lin.Line2D([-1,1e5], [0,0], color='gray'))
 
         for i in range(len(self.M)):
             elem = self.M.conf(i)
